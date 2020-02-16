@@ -57,7 +57,7 @@ def request_handler(message: types.Message):
     result = parser.parse()
 
     for title, description in result:
-        time.sleep(0)
+        time.sleep(0.5)
         try:
             bot.send_message(message.from_user.id, f'*{title[0]}*\nЗарплата: *{title[1]}*\nКомпания: *{title[2].strip()}*\n_{description[3]}_\n\n'
                                                    f'{description[0]}\n{description[1]}',
